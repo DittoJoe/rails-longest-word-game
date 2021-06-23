@@ -15,7 +15,7 @@ class GamesController < ApplicationController
     if @word.upcase.chars.all? { |l| @word.upcase.chars.count(l) <= @letters.count(l) }
       if json['found']
         @score = @word.length * 10
-        @message = 'Grattis!'
+        @message = 'Nice one!'
       else
         @message = "We couldn't find that word, sorry!"
       end
